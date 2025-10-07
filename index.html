@@ -1,0 +1,770 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Box Icon -->
+     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+
+    <style>
+    /* .product-showcase::after{background-image: url("http://localhost/eid-parry/wp-content/uploads/2025/09/section_top.png"); background-repeat: no-repeat; background-size: cover;} */
+    /* .product-showcase::after { content: ""; position: absolute;   top: 0; left: 0; width: 100%; height: 100%; background-image: url("http://localhost/eid-parry/wp-content/uploads/2025/09/section_top.png"); background-repeat: no-repeat; background-size: cover; background-position: center;}
+.product-showcase { background: url("http://localhost/eid-parry/wp-content/uploads/2025/09/brand-video.gif"); /* background-position: top; */
+    /* background-repeat: no-repeat;  background-size: cover;  width: 100%;  height: 700px;} */
+
+    .product-showcase {
+        position: relative;
+        background: url("http://localhost/eid-parry/wp-content/uploads/2025/09/brand-video.gif") no-repeat center/cover;
+        width: 100%;
+        height: 700px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+        background-position: top;
+    }
+
+    .product-showcase::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("http://localhost/eid-parry/wp-content/uploads/2025/09/section_top.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 2;
+        animation: fadeOut 2s ease-out 2s forwards;
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .product-container {
+        background-color: #79A0D3;
+        border-radius: 20px;
+        padding: 60px 40px;
+        position: relative;
+        overflow: hidden;
+        min-height: 400px;
+    }
+
+    .product-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("http://localhost/eid-parry/wp-content/uploads/2025/09/gif-2.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        opacity: 0.2;
+        /* animation: float 10s ease-in-out infinite; */
+    }
+
+
+    .product-container .product-image {
+        max-width: 100%;
+        height: auto;
+        z-index: 2;
+        position: relative;
+    }
+
+    .product-container .product-content {
+        color: white;
+        z-index: 2;
+        position: relative;
+    }
+
+    .product-title {
+        margin-bottom: 0.5rem;
+        color: #2A338B;
+        font-family: "Recoleta";
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 100%;
+        text-transform: capitalize;
+    }
+
+    .product-subtitle {
+        color: #525252;
+        margin-bottom: 1.5rem;
+        font-family: "Recoleta";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: capitalize;
+    }
+
+    .product-description {
+        color: #525252;
+        margin-bottom: 2rem;
+        font-family: "Recoleta";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        text-transform: capitalize;
+    }
+
+    .features-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 50px;
+        gap: 30px;
+    }
+
+    .features-section_2 {
+        gap: 10px;
+        margin-top: 100px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .feature-icon {
+        width: 60%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .feature-icon img {
+        width: 100px;
+        height: auto;
+    }
+
+    .feature-text {
+        color: #2A338B;
+        font-family: "Recoleta";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        text-transform: capitalize;
+        text-wrap: nowrap;
+    }
+
+    .sugar-bowl {
+        position: absolute;
+        bottom: -10px;
+        right: -70px;
+        width: 300px;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+    }
+
+    .sugar-bowl img {
+        width: 80%;
+        height: auto;
+    }
+
+    .sugar-crystals {
+        width: 50px;
+        height: 30px;
+        background: linear-gradient(45deg, #fff 0%, #f0f0f0 100%);
+        border-radius: 10px;
+    }
+
+    .floating-elements {
+        position: relative;
+        font-family: "Recoleta";
+        color: #F3F3F3B8;
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 100%;
+        bottom: -50px;
+        text-transform: uppercase;
+        text-wrap: nowrap;
+        align-items: center;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .bg_dark {
+        background-color: #2A338B;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -20px;
+        right: 60px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dark_bg-2 {
+        background-color: #2A338B;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 320px;
+        right: 300px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .single_product-section {
+        padding-top: 0px !important;
+    }
+
+    .product-container {
+        margin-top: 50px;
+    }
+
+    .main_product-box {
+        margin-top: 30px;
+    }
+
+    .feature-item_2 img {
+        width: 190px;
+        height: auto;
+    }
+
+    .feature-item_3 {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .feature-item_3 .feature-icon img {
+        width: 40px;
+    }
+</style>
+ </head>
+ <body>
+
+<section class="product-showcase" id="product_section_effect">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="brand_main-video">
+        </div>
+    </div>
+
+</section>
+<!-- New comments test -->
+
+<section class="single_product-section">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Product Container 1 -->
+                <div class="main_product-box">
+                    <div class="floating-elements">WHITES SUGAR</div>
+                    <div class="product-container">
+                        <!-- Floating background text -->
+                        <!-- <div class="floating-elements">SUGAR</div> -->
+
+                        <div class="row align-items-center h-100">
+                            <!-- Product Image Column -->
+                            <div class="col-md-5">
+                                <div class="text-center position-relative">
+                                    <div class="dark_bg-2"></div>
+                                    <div class="bg_dark"></div>
+                                    <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/product-image.png" alt="White Label Sugar Package"
+                                        class="product-image">
+                                    <!-- Sugar bowl in bottom right of main image -->
+                                    <div class="sugar-bowl" style="bottom: 50px;">
+                                        <!-- <div class=""> -->
+                                        <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/laddu.png" alt="" style="width: 70%;">
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Content Column -->
+                            <div class="col-md-7">
+                                <div class="product-content">
+                                    <!-- Heading and Subheading -->
+                                    <h1 class="product-title">Parry’s White Label Sugar</h1>
+                                    <h2 class="product-subtitle">White Label</h2>
+
+                                    <!-- Product Description Paragraph -->
+                                    <p class="product-description">
+                                        Parry's white label gives the assurance of quality sugar that is safe, hygienic and
+                                        free from impurities so you can be health of loved ones. It is made from pure
+                                        sugar cane and manufactured in a state-of-the-art factory using a unique sulphur
+                                        free process. It is packed in a safe and sterile factory and is untouched by hand.
+                                    </p>
+
+                                    <!-- Feature Items with Icons -->
+                                    <div class="features-section features-section_2">
+                                        <!-- <div class="feature-item feature-item_2">
+                                        <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/sugar-first.png" alt="img"> -->
+                                        <!-- <div class="feature-icon">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/icon-1.png" alt="icon">
+                                        </div>
+                                        <div class="feature-text">
+                                            Natural<br>Sugar Taste
+                                        </div> -->
+                                        <!-- </div> -->
+
+                                        <!-- <div class="feature-item feature-item_2">
+                                        <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/sugar-second.png" alt="img"> -->
+                                        <!-- <div class="feature-icon">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/icon-2.png" alt="icon">
+                                        </div>
+                                        <div class="feature-text">
+                                            30% Lower<br>Glucose Load
+                                        </div> -->
+                                        <!-- </div> -->
+                                        <div class="feature-item feature-item_2">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/sugar-first.png" alt="img">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/sugar-second.png" alt="img">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/sugar-third.png" alt="img">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product container 2 -->
+                <div class="main_product-box">
+                    <div class="product-container" style="background-color: #83A4DB !important;">
+                        <!-- Floating background text -->
+                        <!-- <div class="floating-elements">SUGAR</div> -->
+
+                        <div class="row align-items-center h-100">
+                            <!-- Product Image Column -->
+                            <div class="col-md-5">
+                                <div class="text-center position-relative">
+                                    <div class="dark_bg-2" style="background-color:#1D73C6 !important;"></div>
+                                    <div class="bg_dark" style="background-color:#1D73C6 !important;"></div>
+                                    <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/Pure.png" alt="White Label Sugar Package"
+                                        class="product-image" style="left: 70px;">
+                                    <!-- Sugar bowl in bottom right of main image -->
+                                    <div class="sugar-bowl">
+                                        <!-- <div class=""> -->
+                                        <img style="width: 60%;" src="http://localhost/eid-parry/wp-content/uploads/2025/10/Gulab-Jamun-Pure-Refined-Sugar.png" alt="">
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Content Column -->
+                            <div class="col-md-7">
+                                <div class="product-content">
+                                    <!-- Heading and Subheading -->
+                                    <h1 class="product-title" style="color:#1D73C6 !important;">Parry’s Pure Refined Sugar</h1>
+                                    <h2 class="product-subtitle">White Label</h2>
+
+                                    <!-- Product Description Paragraph -->
+                                    <p class="product-description">
+                                        Experience the hallmark of purity with Parry's Pure Refined Sugar, which is purified through a superior sulphur-free double refining process. It is refined to 99.9% - the highest degree of purity among sugars - to give pure sparkling white crystals
+                                    </p>
+
+                                    <!-- Feature Items with Icons -->
+                                    <div class="features-section features-section_2">
+                                        <!-- <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/icon-1.png" alt="icon">
+                                        </div>
+                                        <div class="feature-text" style="color: #1D73C6 !important;">
+                                            Natural<br>Sugar Taste
+                                        </div>
+                                    </div> -->
+
+                                        <!-- <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/icon-2.png" alt="icon">
+                                        </div>
+                                        <div class="feature-text" style="color: #1D73C6 !important;">
+                                            30% Lower<br>Glucose Load
+                                        </div>
+                                    </div> -->
+                                        <div class="feature-item feature-item_2">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/sugar-first.png" alt="img">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/sugar-second.png" alt="img">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/sugar-third.png" alt="img">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product container 3 -->
+                <div class="main_product-box">
+                    <!-- <div class="floating-elements">Diabetic friendly</div> -->
+                    <div class="product-container" style="background-color: #9E75B4 !important;">
+                        <!-- Floating background text -->
+                        <!-- <div class="floating-elements">SUGAR</div> -->
+
+                        <div class="row align-items-center h-100">
+                            <!-- Product Image Column -->
+                            <div class="col-md-5">
+                                <div class="text-center position-relative">
+                                    <div class="dark_bg-2" style="background-color: #53306F !important;"></div>
+                                    <div class="bg_dark" style="background-color: #53306F !important;"></div>
+                                    <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/sugar.png" alt="White Label Sugar Package"
+                                        class="product-image">
+                                    <!-- Sugar bowl in bottom right of main image -->
+                                    <div class="sugar-bowl">
+                                        <!-- <div class=""> -->
+                                        <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Carrot-Halwa-SweetCare.png" alt="">
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Content Column -->
+                            <div class="col-md-7">
+                                <div class="product-content">
+                                    <!-- Heading and Subheading -->
+                                    <h1 class="product-title" style="color: #53306F !important;">Parry’s SweetCare Low GI Sugar</h1>
+                                    <!-- <h2 class="product-subtitle">Sweet Care</h2> -->
+
+                                    <!-- Product Description Paragraph -->
+                                    <p class="product-description">
+                                        Parry’s SweetCare Low GI Sugar is a clinically tested Low GI Sugar (Glycemic Index < 48) that helps control rise in blood sugar, thereby supporting a healthier diet. Made with extracts of 7 natural herbal extracts traditionally known to control blood sugar, Parry’s SweetCare Low GI Sugar has 30% lesser glucose load as compared to regular sugar. Parry's SweetCare Low GI Sugar is a natural sweetener can be safely enjoyed by everyone in the family.</p>
+
+                                            <!-- Feature Items with Icons -->
+                                            <div class="features-section features-section_2">
+                                                <div class="feature-item feature-item_2">
+                                                    <div class=" ">
+                                                        <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/SweetCare-1.png" alt="icon">
+                                                    </div>
+                                                    <!-- <div class="feature-text" style="color: #53306F !important;">
+                                            Natural<br>Sugar Taste
+                                        </div> -->
+                                                </div>
+
+                                                <div class="feature-item feature-item_2">
+                                                    <div class=" ">
+                                                        <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/SweetCare-2.png" alt="icon">
+                                                    </div>
+                                                    <!-- <div class="feature-text" style="color: #53306F !important;">
+                                            30% Lower<br>Glucose Load
+                                        </div> -->
+                                                </div>
+                                                <div class="feature-item feature-item_2">
+                                                    <div class="">
+                                                        <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/SweetCare-3.png" alt="icon">
+                                                    </div>
+                                                    <!-- <div class="feature-text" style="color: #53306F !important;">
+                                            30% Lower<br>Glucose Load
+                                        </div>
+                                    </div> -->
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product container 4 -->
+                <div class="main_product-box">
+                    <!-- <div class="floating-elements">Low Calorie</div> -->
+                    <div class="product-container" style="background-color: #D0848D !important;">
+                        <!-- Floating background text -->
+                        <!-- <div class="floating-elements">SUGAR</div> -->
+
+                        <div class="row align-items-center h-100">
+                            <!-- Product Image Column -->
+                            <div class="col-md-5">
+                                <div class="text-center position-relative">
+                                    <div class="dark_bg-2" style="background-color: #CEA154 !important;"></div>
+                                    <div class="bg_dark" style="background-color: #CEA154 !important;"></div>
+                                    <img style="height: 380px; margin:auto;" src="http://localhost/eid-parry/wp-content/uploads/2025/09/main-sugar.png" alt="White Label Sugar Package"
+                                        class="product-image">
+                                    <!-- Sugar bowl in bottom right of main image -->
+                                    <div class="sugar-bowl">
+                                        <!-- <div class=""> -->
+                                        <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Cake-Superfine.png" alt="">
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Content Column -->
+                            <div class="col-md-7">
+                                <div class="product-content">
+                                    <!-- Heading and Subheading -->
+                                    <h1 class="product-title" style="color: #75283E !important;">Parry’s Superfine Sugar</h1>
+                                    <!-- <h2 class="product-subtitle">Superfine Sugar</h2> -->
+
+                                    <!-- Product Description Paragraph -->
+                                    <p class="product-description">
+                                        Welcome to the silky smoothness of new Parry's Superfine Quick Dissolve Sugar, a sugar so pure and fine that it simply melts in the mouth! The crystals are 3 times finer and dissolve 4 times faster than regular sugar (S30 and L30 grade) – enabling it to dissolve easily, instantly and completely in both hot and cold liquids, giving uniform sweetness, from first sip to last. It is ideal for baking and sweet preparation.</p>
+
+                                    <!-- Feature Items with Icons -->
+                                    <div style="margin-top: 40px;" class="features-section features-section_2">
+                                        <div class="feature-item feature-item_2">
+                                            <img style="width: 100%;" src="http://localhost/eid-parry/wp-content/uploads/2025/10/Parrys-SuperFine-USP-Logo-1-1.png" alt="">
+                                            <!-- <div class="feature-icon">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/icon-1.png" alt="icon">
+                                        </div>
+                                        <div class="feature-text" style="color: #75283E !important;">
+                                            Natural<br>Sugar Taste
+                                        </div> -->
+                                        </div>
+
+                                        <!-- <div class="feature-item">
+                                        <div class="feature-icon">
+                                            <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/icon-2.png" alt="icon">
+                                        </div>
+                                        <div class="feature-text" style="color: #75283E !important;">
+                                            30% Lower<br>Glucose Load
+                                        </div>
+                                    </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Product container 5 -->
+                <div class="main_product-box">
+                    <div class="floating-elements">Jaggery Powder</div>
+                    <div class="product-container" style="background-color: #DF895C !important;">
+                        <!-- Floating background text -->
+                        <!-- <div class="floating-elements">SUGAR</div> -->
+
+                        <div class="row align-items-center h-100">
+                            <!-- Product Image Column -->
+                            <div class="col-md-5">
+                                <div class="text-center position-relative">
+                                    <div class="dark_bg-2" style="background-color: #913316 !important;"></div>
+                                    <div class="bg_dark" style="background-color: #913316 !important;"></div>
+                                    <img style="height: 380px; margin:auto;" src="http://localhost/eid-parry/wp-content/uploads/2025/09/jaggery.png" alt="White Label Sugar Package"
+                                        class="product-image">
+                                    <!-- Sugar bowl in bottom right of main image -->
+                                    <div class="sugar-bowl">
+                                        <!-- <div class=""> -->
+                                        <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Jaggery-Sweet-Pongal.png" alt="">
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Content Column -->
+                            <div class="col-md-7">
+                                <div class="product-content">
+                                    <!-- Heading and Subheading -->
+                                    <h1 class="product-title" style="color: #913316 !important;">Parry’s Jaggery Powder</h1>
+                                    <!-- <h2 class="product-subtitle">Jaggery Powder</h2> -->
+
+                                    <!-- Product Description Paragraph -->
+                                    <p class="product-description">
+                                        Parry's Jaggery Powder conforms to the highest standards of quality and purity. It is made from select first grade sugarcane and is manufactured hygienically in a state-of-the-art-factory. It is not bleached with any harmful chemicals and retains the original colour. It is a source of iron, calcium, potassium and magnesium - providing vital health benefits. Unlike block jaggery, Parry’s Jaggery Powder requires no breaking, boiling and straining and can be added directly to dishes. It melts quickly and enriches dishes with its rich aroma and the original delicious taste of Jaggery.</p>
+
+                                    <!-- Feature Items with Icons -->
+                                    <div class="features-section">
+                                        <div class="feature-item">
+                                            <div class="feature-icon">
+                                                <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Mask-group-2.png" alt="icon">
+                                            </div>
+                                            <div class="feature-text" style="color: #913316 !important;">
+                                                Natural<br>Sugar Taste
+                                            </div>
+                                        </div>
+
+                                        <div class="feature-item">
+                                            <div class="feature-icon">
+                                                <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Mask-group-3.png" alt="icon">
+                                            </div>
+                                            <div class="feature-text" style="color: #913316 !important;">
+                                                30% Lower<br>Glucose Load
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product container 6 -->
+                <div class="main_product-box">
+                    <div class="floating-elements">Brown Sugar</div>
+                    <div class="product-container" style="background-color: #A9B42D !important;">
+                        <!-- Floating background text -->
+                        <!-- <div class="floating-elements">SUGAR</div> -->
+
+                        <div class="row align-items-center h-100">
+                            <!-- Product Image Column -->
+                            <div class="col-md-5">
+                                <div class="text-center position-relative">
+                                    <div class="dark_bg-2" style="background-color:#4C7425 !important;"></div>
+                                    <div class="bg_dark" style="background-color:#4C7425 !important;"></div>
+                                    <img src="http://localhost/eid-parry/wp-content/uploads/2025/09/brown-sugar.png" alt="White Label Sugar Package"
+                                        class="product-image">
+                                    <!-- Sugar bowl in bottom right of main image -->
+                                    <div class="sugar-bowl">
+                                        <!-- <div class=""> -->
+                                        <img style="width: 50% !important;" src="http://localhost/eid-parry/wp-content/uploads/2025/10/Amrit-Brown-Sugar-Filter-Coffee.png" alt="">
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Content Column -->
+                            <div class="col-md-7">
+                                <div class="product-content">
+                                    <!-- Heading and Subheading -->
+                                    <h1 class="product-title" style="color:#4C7425 !important;">Parry’s Amrit Brown Sugar</h1>
+                                    <!-- <h2 class="product-subtitle">Amrit Brown Label</h2> -->
+
+                                    <!-- Product Description Paragraph -->
+                                    <p class="product-description">
+                                        Parry’s Amrit Superior Brown Sugar has 6 vital minerals, viz., Potassium, Calcium, Magnesium, Sodium, Phosphorous and Iron, essential for health and nutrition. Moreover, it has ~10% lesser calories as compared to white refined sugar – making it truly “The Better Sugar”. The original flavour and the rich taste blends seamlessly into the recipes - making it perfect for baking or adding depth to the dishes.
+                                    </p>
+
+                                    <!-- Feature Items with Icons -->
+                                    <div class="features-section">
+                                        <div class="feature-item">
+                                            <div class="feature-icon">
+                                                <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Mask-group.png" alt="icon">
+                                            </div>
+                                            <div class="feature-text" style="color: #4C7425 !important;">
+                                                Natural<br>Sugar Taste
+                                            </div>
+                                        </div>
+
+                                        <div class="feature-item">
+                                            <div class="feature-icon">
+                                                <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Mask-group-1.png" alt="icon">
+                                            </div>
+                                            <div class="feature-text" style="color: #4C7425 !important;">
+                                                30% Lower<br>Glucose Load
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product container 7 -->
+                <div class="main_product-box">
+                    <div class="product-container" style="background-color: #CCA95C !important;">
+                        <!-- Floating background text -->
+                        <!-- <div class="floating-elements">SUGAR</div> -->
+
+                        <div class="row align-items-center h-100">
+                            <!-- Product Image Column -->
+                            <div class="col-md-5">
+                                <div class="text-center position-relative">
+                                    <div class="dark_bg-2" style="background-color:#513629 !important;"></div>
+                                    <div class="bg_dark" style="background-color:#513629 !important;"></div>
+                                    <img style="height: 400px; margin: auto;" src="http://localhost/eid-parry/wp-content/uploads/2025/09/brown-sugar-2.png" alt="White Label Sugar Package"
+                                        class="product-image">
+                                    <!-- Sugar bowl in bottom right of main image -->
+                                    <div class="sugar-bowl">
+                                        <!-- <div class=""> -->
+                                        <img style="width: 60%;" src="http://localhost/eid-parry/wp-content/uploads/2025/10/Capaccino-Gold-Premium-Brown-Sugar.png" alt="">
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product Content Column -->
+                            <div class="col-md-7">
+                                <div class="product-content">
+                                    <!-- Heading and Subheading -->
+                                    <h1 class="product-title" style="color:#513629 !important;">Parry’s Gold Premium Brown Sugar</h1>
+                                    <!-- <h2 class="product-subtitle">Gold Brown Label</h2> -->
+
+                                    <!-- Product Description Paragraph -->
+                                    <p class="product-description">
+                                        Parry's Gold Premium Brown Sugar is a unique Low GI brown sugar that contains powerfully active antioxidants. Made using the advanced NuCane technology, it retains the micro-nutrients in the sugar, which reduces the bio-accessibility of glucose by upto 20%. The goodness of this healthy premium brown sugar can be best enjoyed in tea, coffee and desserts.  
+                                    </p>
+
+                                    <!-- Feature Items with Icons -->
+                                    <div class="features-section">
+                                        <div class="feature-item feature-item_3">
+                                            <div class="feature-icon">
+                                                <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Group.png" alt="icon">
+                                            </div>
+                                            <div class="feature-text" style="color: #513629 !important;">
+                                                Less<br>Processed
+                                            </div>
+                                        </div>
+
+                                        <div class="feature-item feature-item_3">
+                                            <div class="feature-icon">
+                                                <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Group-1.png" alt="icon">
+                                            </div>
+                                            <div class="feature-text" style="color: #513629 !important;">
+                                                No<br>Additives
+                                            </div>
+                                        </div>
+                                        <div class="feature-item feature-item_3">
+                                            <div class="feature-icon">
+                                                <img src="http://localhost/eid-parry/wp-content/uploads/2025/10/Group-2.png" alt="icon">
+                                            </div>
+                                            <div class="feature-text" style="color: #513629 !important;">
+                                                Active<br>Antioxidants
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+
+
+                
+            </div>
+        </div>
+</section>
+ 
+
+ </body>
+ </html>
